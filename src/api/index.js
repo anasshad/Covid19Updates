@@ -3,10 +3,15 @@ import Axios from "axios";
 const url = "https://covid19.mathdro.id/api";
 
 export const fetchData = async country => {
+  console.log(country);
   let changeableUrl = url;
 
   if (country) {
-    changeableUrl = `${url}/countries/${country}`;
+    if (country === "United States of America") {
+      changeableUrl = `${url}/countries/US`;
+    } else {
+      changeableUrl = `${url}/countries/${country}`;
+    }
   }
 
   try {
