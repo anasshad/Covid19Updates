@@ -35,7 +35,7 @@ const Map = ({ setTooltipContent, setCountry }) => {
                   }}
                   style={{
                     default: {
-                      fill: "#D6D6DA",
+                      fill: "#777777",
                       outline: "none"
                     },
                     hover: {
