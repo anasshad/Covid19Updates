@@ -3,7 +3,7 @@ import ReactTooltip from "react-tooltip";
 import styles from "./App.module.css";
 import { Grid, Typography } from "@material-ui/core";
 import { fetchData } from "./api";
-import { Cards, Chart, CountryPicker, Map } from "./components";
+import { Cards, Chart, CountryPicker, Map, NoData } from "./components";
 import Logo from "./assets/COVID19LOGO.png";
 
 export default function App() {
@@ -34,13 +34,13 @@ export default function App() {
       </Grid>
       <Grid container alignItems="flex-start">
         <Grid item xs={12} md={6}>
-          <Cards data={data} />
+          {data ? <Cards data={data} /> : <NoData />}
         </Grid>
         <Grid item xs={12} md={5}>
           <Map setTooltipContent={setContent} setCountry={setCountry} />
         </Grid>
       </Grid>
-      <Chart data={data} country={country} />
+      {data ? <Chart data={data} country={country} /> : <NoData />}
       <ReactTooltip>{content}</ReactTooltip>
     </div>
   );
