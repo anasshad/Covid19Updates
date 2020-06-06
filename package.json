@@ -1,0 +1,35 @@
+{
+  "name": "covid19tracker",
+  "version": "1.0.0",
+  "description": "React app to track global and country wise Covid 19 cases",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@material-ui/core": "4.10.1",
+    "axios": "0.19.2",
+    "chart.js": "2.9.3",
+    "classnames": "2.2.6",
+    "react": "16.12.0",
+    "react-chartjs-2": "2.9.0",
+    "react-countup": "4.3.3",
+    "react-dom": "16.12.0",
+    "react-scripts": "3.0.1",
+    "react-simple-maps": "2.1.2",
+    "react-tooltip": "4.2.6"
+  },
+  "devDependencies": {
+    "typescript": "3.8.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

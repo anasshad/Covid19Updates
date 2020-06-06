@@ -1,0 +1,10 @@
+.formControl {
+  width: 80%;
+  margin-bottom: 30px !important;
+}
+
+@media (max-width: 770px) {
+  .formControl {
+    width: 100% !important;
+  }
+}
