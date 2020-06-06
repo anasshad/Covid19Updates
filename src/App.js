@@ -3,7 +3,7 @@ import ReactTooltip from "react-tooltip";
 import styles from "./App.module.css";
 import { Grid, Typography } from "@material-ui/core";
 import { fetchData } from "./api";
-import { Cards, Chart, CountryPicker, Map, NoData } from "./components";
+import { Cards, Chart, CountryPicker, Map } from "./components";
 import Logo from "./assets/COVID19LOGO.png";
 
 export default function App() {
@@ -22,25 +22,25 @@ export default function App() {
   return (
     <div className={styles.container}>
       <Grid container justify="center" alignItems="center">
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={8}>
           <img src={Logo} className={styles.image} alt="logo" />
         </Grid>
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={3}>
           <Typography variant="subtitle1" color="textSecondary" gutterBottom>
             Select any country from options or map below to view updates
           </Typography>
           <CountryPicker value={country} onChange={setCountry} />
         </Grid>
       </Grid>
-      <Grid container alignItems="flex-start">
-        <Grid item xs={12} md={6}>
-          {data ? <Cards data={data} /> : <NoData />}
+      <Grid container>
+        <Grid item xs={12} md={8}>
+          <Cards data={data} />
         </Grid>
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={3}>
           <Map setTooltipContent={setContent} setCountry={setCountry} />
         </Grid>
       </Grid>
-      {data ? <Chart data={data} country={country} /> : <NoData />}
+      <Chart data={data} country={country} />
       <ReactTooltip>{content}</ReactTooltip>
     </div>
   );
