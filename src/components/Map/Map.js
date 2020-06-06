@@ -6,7 +6,6 @@ import {
   Geography
 } from "react-simple-maps";
 import { Container } from "@material-ui/core";
-import styles from "./Map.module.css";
 
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
