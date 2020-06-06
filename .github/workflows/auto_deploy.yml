@@ -43,4 +43,4 @@ jobs:
     
     # Runs a single command using the runners shell
     - name: Deploy to Surge
-      run: surge ./build project003-anasshad.surge.sh --token ${{secrets.SURGE_TOKEN}}
+      run: surge ./build covid19latestupdates.surge.sh --token ${{secrets.SURGE_TOKEN}}
